@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <title>Accueil</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link rel="stylesheet" href="style/style.css">
+    </head>
+
+    <body>
+        <header>
+            <img src="img/jarditou_logo.jpg" alt="Logo Jarditou" title="Logo Jarditou" width="100px">
+            <p id="top" class="text-center" style="display: inline;">Tout le Jardin</p>
+            <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+                <a class="navbar-brand" href="Page_d'Accueil-Javascript.html">Jarditou.com</a>
+                <!-- Toggler/collapside Button-->
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                    <span class="collapse navbar-toggler-icon" id="collapsibleNavbar"></span> 
+                </button>
+                    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link" href="Page_d'Accueil-Javascript.html">Accueil</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="tableau_Javascript.html">Tableau</a>
+                            </li>
+
+                            <li class="nav-item font-weight-bold">
+                                <a class="nav-link" href="Formulaire_Jarditou-Eval.html">Contact</a>
+                            </li>
+                        </ul>
+
+                        <form class="form-inline my-2 my-lg-0 lientop">
+                            <input class="form-control mr-sm-2" type="search" placeholder="Votre promotion" aria-label="Search">
+                            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                        </form>
+                    </div>
+            </nav>
+        </header>
+
+        <img src="img/promotion.jpg" alt="Promotion Jarditou" title="Promo Jarditou" width="100%" class="mb-1"> 
+        <form action="Page_d'Accueil-Javascript.html" method="POST" id="envoie">
+            <span>*Ces zones sont obligatoires</span>
+            <fieldset>
+                <legend><h2>Vos Coordonnées</h2></legend>
+                <div class="form-group">
+                    <label for="nom">Votre Nom*</label>
+                    <input type="text" name="votre_nom" id="nom" class="form-control">
+                    <p id="missName"></p>
+                </div>
+
+                <div class="form-group">
+                    <label for="fname">Votre Prénom*</label>
+                    <input type="text" name="votre_prenom" id="fname" class="form-control">
+                    <p id="missFname"></p>
+                </div>
+
+                <label class="from-check-label">Sexe*</label>                
+                <div class="form-check form-check-inline">
+                    <input type="radio" name="votre_sexe" id="Fem" value="Féminin" class="form-check-input">Féminin
+                    <input type="radio" name="votre_sexe" id="Mas" value="Masculin" class="form-check-input">Masculin
+                </div>
+                    <p id="missGenre"></p>                
+
+                <div class="form-group">
+                    <label for="Bday">Date de Naissance*</label>
+                    <input type="date" name="votre_date" id="Bday" class="form-control">
+                    <p id="missDate"></p>
+                </div>
+
+                <div class="form-group">
+                    <label for="cpostal">Code Postal*</label>
+                    <input type="text" name="votre_cp" id="cpostal" class="form-control">
+                    <p id="missCP"></p>
+                </div>
+                
+                <div class="form-group">
+                    <label for="city">Ville*</label>
+                    <input type="text" name="city" id="city" class="form-control">
+                    <p id="missCity"></p>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email*</label>
+                    <input type="text" name="email" id="email" class="form-control">
+                    <p id="missMail"></p>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend><h2>Votre Demande</h2></legend>
+                <div class="form-group">
+                    <label for="suj" >Sujet* :</label>
+                  <select id="suj" class="form-control">
+                    <option value="1" selected>Veuillez sélectionner un sujet</option>
+                    <option value="2" >Mes commandes</option>
+                    <option value="3" >Question sur un produit</option>
+                    <option value="4" >Réclamation</option>
+                    <option value="5" >Autres</option>
+                  </select>
+                  <p id="missSuj"></p>
+                </div>
+
+                <div class="form-group">
+                    <label for="question">Votre Question* :</label>
+                    <textarea name="question" id="question" rows="3" cols="50" class="form-control"></textarea>
+                    <p id="missQuestion"></p>
+                </div>
+            </fieldset>
+
+            <div class="form-check form-check-inline">
+                <input type="checkbox" name="accept" id="customCheck1" value="Bleu" class="form-check-input" required> *J'accepte le traitement informatique de ce formulaire
+                <p id="errAccept"></p>
+            </div><br>
+            <button type="submit" id="send" class="btn btn-primary" name="ok">Envoyer</button>
+            <button type="reset" id="cancel"  class="btn btn-primary" name="cancel" >Annuler</button>
+            
+        </form>
+
+        <footer>
+            <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+                <!-- Toggler/collapside Button-->
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                    <span class="collapse navbar-toggler-icon" id="collapsibleNavbar"></span> 
+                </button>
+                    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link" href="Formulaire_Jarditou-Eval.html">Mentions légales</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="Formulaire_Jarditou-Eval.html">Horaires</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="Formulaire_Jarditou-Eval.html">Plan du Site</a>
+                            </li>
+                        </ul>
+                    </div>
+            </nav>
+        </footer>
+
+        <script src="Js/Eval_Formulaire-Javascript.js"></script>
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>  
+    </body>
+</html>
